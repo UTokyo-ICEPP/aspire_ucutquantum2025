@@ -1,0 +1,36 @@
+
+/* Simple responsive style for the workshop site */
+:root{
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#7dd3fc;
+  --muted:#94a3b8;
+  --accent2:#60a5fa;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg,#071022, #081129 60%);
+  color:#e6eef8;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.45;
+}
+.container{max-width:980px;margin:32px auto;padding:24px;}
+.header{display:flex;gap:16px;align-items:center;margin-bottom:18px;}
+.logo{width:64px;height:64px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#001;box-shadow:0 6px 18px rgba(2,6,23,.6);}
+.site-title h1{margin:0;font-size:20px;}
+.site-title p{margin:0;color:var(--muted);font-size:13px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,.6);margin-bottom:16px;}
+.grid{display:grid;grid-template-columns:1fr 320px;gap:20px;}
+@media(max-width:880px){.grid{grid-template-columns:1fr}}
+.nav a{color:var(--accent);text-decoration:none;margin-right:12px;font-weight:600}
+.small{font-size:13px;color:var(--muted)}
+.table{width:100%;border-collapse:collapse;margin-top:8px}
+.table th, .table td{padding:8px;border-bottom:1px solid rgba(255,255,255,0.04);text-align:left;font-size:14px}
+.time{white-space:nowrap;color:var(--muted);font-weight:600;}
+.speaker{font-weight:600}
+.venue{font-weight:700;color:var(--accent2)}
+.footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(125,211,252,0.08);color:var(--accent);font-weight:700;font-size:13px}
+.poster{font-size:13px;color:var(--muted);margin-top:6px}
