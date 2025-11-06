@@ -1,47 +1,37 @@
-
+/* Simple responsive style for the workshop site */
 :root{
-  --ink:#0f172a; --muted:#475569; --bg:#ffffff; --card:#ffffff; --ring:#e2e8f0; --accent:#eef2ff;
+  --bg:#0f1724;
+  --card:#0b1220;
+  --accent:#7dd3fc;
+  --muted:#94a3b8;
+  --accent2:#60a5fa;
 }
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;color:var(--ink);background:radial-gradient(circle at 1px 1px, rgba(0,0,0,.03) 1px, transparent 0) , var(--bg);background-size:18px 18px;font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;line-height:1.6}
-.container{max-width:1100px;margin:0 auto;padding:24px}
-.header{background:linear-gradient(135deg,#f8fafc,#eef2ff);padding:36px 0;border-bottom:1px solid var(--ring)}
-h1{font-size:clamp(28px,4vw,42px);margin:6px 0 0}
-.subtitle{color:var(--muted);margin-top:4px}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.chip{display:inline-flex;align-items:center;border:1px solid #c7d2fe;border-radius:9999px;padding:6px 10px;font-size:12px;background:#eef2ff}
-.grid{display:grid;gap:16px;grid-template-columns:1fr}
-@media(min-width:900px){.grid{grid-template-columns:300px 1fr}}
-.card{background:var(--card);border:1px solid var(--ring);border-radius:16px;padding:16px}
-.kicker{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
-.btn{display:inline-block;border:1px solid #c7d2fe;background:#eef2ff;padding:8px 12px;border-radius:10px;text-decoration:none;color:#1e293b;font-weight:600}
-.timeline{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px}
-.slot{border:1px solid var(--ring);border-radius:14px;padding:12px;background:#fff}
-.slot .time{font-size:12px;color:var(--muted);text-transform:uppercase}
-.slot .title{font-weight:700;margin:2px 0}
-.badge{font-size:12px;border:1px solid #e2e8f0;border-radius:9999px;padding:2px 8px;margin-left:auto}
-.slot.break{background:#fff7ed;border-color:#fed7aa}
-.slot.lunch{background:#ecfdf5;border-color:#a7f3d0}
-.footer{border-top:1px solid var(--ring);margin-top:40px;padding:24px 0;color:var(--muted)}
-.nav{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
-.nav a{color:#1f2937;text-decoration:none;border-bottom:1px dotted #cbd5e1}
-.hero-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-table{border-collapse:collapse;width:100%} th,td{border:1px solid var(--ring);padding:8px;text-align:left}
-section h2{margin-top:4px}
-.small{font-size:12px;color:var(--muted)}
-
-/* details/summary styling for clickable abstracts */
-.slot summary {
-  list-style: none;          /* hide default marker */
-  cursor: pointer;
-  display: grid;
-  grid-template-columns: 1fr; /* keeps current layout */
-  gap: 8px;
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg,#071022, #081129 60%);
+  background-color: #ffffff;
+  color: #222222;  
+  -webkit-font-smoothing:antialiased;
+  line-height:1.45;
 }
-.slot[open] summary {
-  border-bottom: 1px solid var(--ring);
-  padding-bottom: 8px;
-  margin-bottom: 8px;
-}
-.abstract { color: var(--muted); font-size: 14px; }
+.container{max-width:980px;margin:32px auto;padding:24px;}
+.header{display:flex;gap:16px;align-items:center;margin-bottom:18px;}
+.logo{width:64px;height:64px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#001;box-shadow:0 6px 18px rgba(2,6,23,.6);}
+.site-title h1{margin:0;font-size:20px;}
+.site-title p{margin:0;color:var(--muted);font-size:13px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,.6);margin-bottom:16px;}
+.grid{display:grid;grid-template-columns:1fr 320px;gap:20px;}
+@media(max-width:880px){.grid{grid-template-columns:1fr}}
+.nav a{color:var(--accent);text-decoration:none;margin-right:12px;font-weight:600}
+.small{font-size:13px;color:var(--muted)}
+.table{width:100%;border-collapse:collapse;margin-top:8px}
+.table th, .table td{padding:8px;border-bottom:1px solid rgba(255,255,255,0.04);text-align:left;font-size:14px}
+.time{white-space:nowrap;color:var(--muted);font-weight:600;}
+.speaker{font-weight:600}
+.venue{font-weight:700;color:var(--accent2)}
+.footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+.badge{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(125,211,252,0.08);color:var(--accent);font-weight:700;font-size:13px}
+.poster{font-size:13px;color:var(--muted);margin-top:6px}
 
