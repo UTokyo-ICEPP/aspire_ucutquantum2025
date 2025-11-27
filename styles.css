@@ -67,3 +67,7 @@ details[open] summary {
   text-align: left;
   padding: 6px 0;
 }
+.table thead th {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
