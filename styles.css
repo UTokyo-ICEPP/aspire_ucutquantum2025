@@ -51,17 +51,20 @@ details summary {
   color: #004080;
   margin-bottom: 5px;
 }
-
 details[open] summary {
   color: #000;
 }
-
 .poster-list {
   margin: 5px 0 0 15px;
   padding: 0;
   list-style-type: disc;
 }
-
 .poster-list li {
   margin: 3px 0;
+}
+.chair-row {
+  font-weight: bold;
+  background-color: #f0f0f0;
+  text-align: center;
+  padding: 6px 0;
 }
